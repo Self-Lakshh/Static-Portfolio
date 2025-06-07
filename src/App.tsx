@@ -66,7 +66,7 @@ const App = () => {
           data-aos="fade-up"
         >
           {/* Banner */}
-          <div className="relative w-full aspect-[4/1] bg-gray-100 min-h-[160px] sm:min-h-0">
+          <div className="relative w-full aspect-[4/1] bg-gray-100 sm:min-h-0">
             <img
               src="/banner.jpeg"
               alt="Profile Banner"
@@ -76,7 +76,7 @@ const App = () => {
               <img
                 src="/pfp.jpg"
                 alt="Profile"
-                className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-white object-cover shadow-md bg-white"
+                className="w-24 h-24 sm:w-36 sm:h-36 rounded-full border-4 border-white object-cover shadow-md bg-white"
               />
             </div>
           </div>
@@ -163,7 +163,9 @@ const App = () => {
 
           {/* Experience Item 1 */}
           <div className="flex items-start gap-4 mb-6">
-            <div className="w-12 h-12 flex items-center justify-center rounded bg-blue-600 text-white font-semibold text-base sm:text-lg font-sans">EV</div>
+            <div className="w-15 h-15 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/images/edulyst.png" alt="Edulyst Ventures" className="w-full h-full object-contain" />
+            </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Full Stack Developer</h3>
               <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Edulyst Ventures • Full-time</div>
@@ -182,7 +184,9 @@ const App = () => {
 
           {/* Experience Item 2 */}
           <div className="flex items-start gap-4 mb-2">
-            <div className="w-12 h-12 flex items-center justify-center rounded bg-green-600 text-white font-semibold text-base sm:text-lg font-sans">CC</div>
+            <div className="w-15 h-15 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/images/codeclause.png" alt="Code Clause" className="w-full h-full object-contain" />
+            </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Web + AI/ML Intern</h3>
               <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Code Clause • Internship</div>
@@ -202,8 +206,8 @@ const App = () => {
           </div>
 
           {/* Education 1: SPSU */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-12 sm:h-12 bg-purple-600 rounded mx-auto sm:mx-0">
+          <div className="flex flex-row items-start gap-4 mb-6">
+            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-purple-600 rounded">
               <span className="text-white font-semibold text-sm">SPSU</span>
             </div>
             <div className="flex-1">
@@ -217,9 +221,9 @@ const App = () => {
           <hr className="mb-6 border-gray-200" />
 
           {/* Education 2: MLSU */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-12 sm:h-12 mx-auto sm:mx-0">
-              <img src="/images/mlsu.png" alt="MLSU" className="w-16 h-16 sm:w-12 sm:h-12 rounded object-contain bg-white border" />
+          <div className="flex flex-row items-start gap-4">
+            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-white rounded border">
+              <img src="/images/mlsu.png" alt="MLSU" className="w-16 h-16 rounded object-contain" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-900 font-sans">Mohanlal Sukhadia University</h3>
@@ -230,9 +234,9 @@ const App = () => {
                 <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 18v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1" /><circle cx="12" cy="7" r="4" /></svg>
                 <span className="text-sm text-gray-700 font-sans">Web Development</span>
               </div>
-              <div className="flex flex-col sm:flex-row items-start gap-4 mt-2">
-                <div className="rounded-lg overflow-hidden border w-full sm:w-40">
-                  <img src="/images/award-bca.jpg" alt="Award For 1st In BCA" className="w-full sm:w-40 h-24 object-cover" />
+              <div className="flex flex-row items-start gap-4 mt-2">
+                <div className="rounded-lg overflow-hidden border w-40">
+                  <img src="/images/award-bca.jpg" alt="Award For 1st In BCA" className="w-full h-24 object-cover" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-base mb-0.5 font-sans">Award For 1st In BCA</h4>
@@ -254,7 +258,9 @@ const App = () => {
 
           {/* Volunteering Item 1 */}
           <div className="flex items-start gap-4 mb-6">
-            <img src="/images/gdg.png" alt="GDG Udaipur" className="w-10 h-10 rounded object-contain bg-white border" />
+            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
+              <img src="/images/gdg.png" alt="GDG Udaipur" className="w-8 h-8 object-contain" />
+            </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Member</h3>
               <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Google Developers Group Udaipur</div>
@@ -265,7 +271,9 @@ const App = () => {
           <hr className="my-2 border-gray-200" />
           {/* Volunteering Item 2 */}
           <div className="flex items-start gap-4 mb-2">
-            <img src="/images/sih.png" alt="Smart India Hackathon" className="w-10 h-10 rounded object-contain bg-white border" />
+            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
+              <img src="/images/sih.png" alt="Smart India Hackathon" className="w-8 h-8 object-contain" />
+            </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Project Team Lead</h3>
               <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Smart India Hackathon</div>
@@ -297,12 +305,8 @@ const App = () => {
               <p className="text-xs sm:text-sm text-gray-500 font-medium mb-1 font-sans">Associated with SPSU Udaipur</p>
               <div className="text-gray-700 text-sm sm:text-base font-medium mb-1 font-sans">Used by over 250+ users</div>
               <DescriptionWithClamp text="We developed a comprehensive Sports ERP system designed to automate requests, efficiently track inventory, and streamline sports event management for SPSU. The platform supports real-time updates, analytics, and is actively used by students and staff." className="mb-3" />
-              <div className="rounded-lg overflow-hidden border w-40">
-                <img
-                  src="/images/spsu-erp-thumbnail.png"
-                  alt="SPSU SPORTS ERP"
-                  className="w-40 h-24 object-cover"
-                />
+              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
+                <img src="/images/spsu-erp-thumbnail.png" alt="SPSU SPORTS ERP" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -318,12 +322,8 @@ const App = () => {
               </div>
               <p className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Independent Research • Udaipur</p>
               <DescriptionWithClamp text="Developed an ML model to predict student dropouts based on academic and socio-economic data. Published research and created a dashboard for educators to monitor risk." className="mb-3" />
-              <div className="rounded-lg overflow-hidden border w-40">
-                <img
-                  src="/images/project2.jpg"
-                  alt="Dropout Dashboard"
-                  className="w-40 h-24 object-cover"
-                />
+              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
+                <img src="/images/project2.jpg" alt="Dropout Dashboard" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -340,12 +340,8 @@ const App = () => {
               </div>
               <p className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Internship Project • Remote</p>
               <DescriptionWithClamp text="Created an NLP chatbot that answers student queries about courses, admissions, and events, integrated with the institution’s website for 24/7 support." className="mb-3" />
-              <div className="rounded-lg overflow-hidden border w-40">
-                <img
-                  src="/images/project3.jpg"
-                  alt="Chatbot"
-                  className="w-40 h-24 object-cover"
-                />
+              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
+                <img src="/images/project3.jpg" alt="Chatbot" className="w-full h-full object-contain" />
               </div>
             </div>
           </div>
@@ -362,7 +358,7 @@ const App = () => {
 
           {/* Certificate 1 */}
           <div className="flex flex-row gap-4 mb-6 items-start">
-            <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 bg-black rounded self-start">
+            <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 bg-black rounded">
               <img src="/images/hackerrank.png" alt="HackerRank" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex-1 min-w-0">
@@ -382,7 +378,7 @@ const App = () => {
 
           {/* Certificate 2 */}
           <div className="flex flex-row gap-4 mb-2 items-start">
-            <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 bg-white border rounded self-start">
+            <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 bg-white rounded border">
               <img src="/images/testdome.png" alt="TestDome" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex-1 min-w-0">
