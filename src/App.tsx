@@ -68,13 +68,13 @@ const App = () => {
           {/* Banner */}
           <div className="relative w-full aspect-[4/1] bg-gray-100 sm:min-h-0">
             <img
-              src="/banner.jpeg"
+              src="/assets/banner.jpeg"
               alt="Profile Banner"
               className="absolute inset-0 w-full h-full object-contain"
             />
             <div className="absolute bottom-0 left-6 translate-y-1/2 flex items-end gap-4">
               <img
-                src="/pfp.jpg"
+                src="/assets/pfp.jpg"
                 alt="Profile"
                 className="w-24 h-24 sm:w-36 sm:h-36 rounded-full border-4 border-white object-cover shadow-md bg-white"
               />
@@ -83,8 +83,8 @@ const App = () => {
 
           {/* Verified Badge below banner, aligned to pfp */}
           <div className="flex items-center justify-end pr-6 mt-4">
-            <span className="inline-flex items-center bg-gray-100 text-gray-800 text-base px-3 py-1 rounded-full border border-gray-300 shadow-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
-              <FaCheckCircle className="text-blue-500 mr-1" aria-label="Verified" /> Verified profile
+            <span className="inline-flex items-center bg-gray-100 text-gray-800 text-sm sm:text-base px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full border border-gray-300 shadow-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <FaCheckCircle className="text-blue-500 mr-1 w-4 h-4 sm:w-5 sm:h-5" aria-label="Verified" /> Verified profile
             </span>
           </div>
 
@@ -163,35 +163,76 @@ const App = () => {
 
           {/* Experience Item 1 */}
           <div className="flex items-start gap-4 mb-6">
-            <div className="w-15 h-15 flex items-center justify-center rounded bg-white border overflow-hidden">
-              <img src="/images/edulyst.png" alt="Edulyst Ventures" className="w-full h-full object-contain" />
+            <div className="w-16 h-16 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/assets/edulyst.jpeg" alt="Edulyst Ventures" className="w-full h-full object-contain" />
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Full Stack Developer</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Edulyst Ventures • Full-time</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">May 2023 - Present</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Udaipur, Rajasthan (Remote)</div>
-              <DescriptionWithClamp text="Building and maintaining scalable web applications for education management. Led the development of Sports ERP 1.0 and contributed to AI/ML integration for analytics." className="mt-2 mb-1" />
-              <div className="flex flex-wrap gap-2 mt-2">
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">React</span>
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">TypeScript</span>
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">Node.js</span>
-                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">AI/ML</span>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Edulyst Ventures Pvt Ltd. • Full-time</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Apr 2025 - Present</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Gurugram, Haryana, India · On-site</div>
+              <div className="flex flex-wrap gap-2 mt-2 mb-1">
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">React.js</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">Laravel</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">+4 skills</span>
               </div>
             </div>
           </div>
           <hr className="mb-6 border-gray-200" />
 
           {/* Experience Item 2 */}
-          <div className="flex items-start gap-4 mb-2">
-            <div className="w-15 h-15 flex items-center justify-center rounded bg-white border overflow-hidden">
-              <img src="/images/codeclause.png" alt="Code Clause" className="w-full h-full object-contain" />
+          <div className="flex items-start gap-4 mb-6">
+            <div className="w-16 h-16 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/assets/spsu.jpeg" alt="SPSU Udaipur" className="w-full h-full object-contain" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Web + AI/ML Intern</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Code Clause • Internship</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Jan 2023 - Apr 2023</div>
-              <DescriptionWithClamp text="Assisted in building AI models to predict school dropouts and implemented frontend components for data visualization using React and Chart.js." className="mt-2 mb-1" />
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Web Developer || University SPORTS ERP</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">SPSU Udaipur • Internship</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Aug 2024 - Jan 2025</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Udaipur, Rajasthan, India · On-site</div>
+              <div className="flex flex-wrap gap-2 mt-2 mb-1">
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">Team Leadership</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">React.js</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">+3 skills</span>
+              </div>
+            </div>
+          </div>
+          <hr className="mb-6 border-gray-200" />
+
+          {/* Experience Item 3 */}
+          <div className="flex items-start gap-4 mb-6">
+            <div className="w-16 h-16 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/assets/codeclause.png" alt="CodeClause" className="w-full h-full object-contain" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Artificial Intelligence Intern</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">CodeClause • Internship</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Jul 2024 - Sep 2024</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Pune, Maharashtra, India · Remote</div>
+              <div className="flex flex-wrap gap-2 mt-2 mb-1">
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">Python</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">Deep Learning</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">+1 skill</span>
+              </div>
+            </div>
+          </div>
+          <hr className="mb-6 border-gray-200" />
+
+          {/* Experience Item 4 */}
+          <div className="flex items-start gap-4 mb-2">
+            <div className="w-16 h-16 flex items-center justify-center rounded bg-white border overflow-hidden">
+              <img src="/assets/codeclause.png" alt="CodeClause" className="w-full h-full object-contain" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Web Developer</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">CodeClause • Internship</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Jul 2023 - Aug 2023</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Remote</div>
+              <div className="flex flex-wrap gap-2 mt-2 mb-1">
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">HTML5</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">JavaScript</span>
+                <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded font-sans">+2 skills</span>
+              </div>
             </div>
           </div>
         </section>
@@ -211,140 +252,41 @@ const App = () => {
               <span className="text-white font-semibold text-sm">SPSU</span>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-gray-900 font-sans">Sir Padampat Singhania University</h3>
-              <p className="text-gray-600 font-sans">Master of Computer Applications (MCA)</p>
-              <p className="text-sm text-gray-500 font-sans">2023 - 2025</p>
-              <DescriptionWithClamp text="Focused on Artificial Intelligence, Machine Learning, and Full Stack Web Development. Published research on AI applications in mathematics and dropout prediction." className="mt-2" />
+              <h3 className="text-lg font-semibold text-gray-900 font-sans">SPSU Udaipur</h3>
+              <p className="text-gray-600 font-sans">Master of Computer Applications - MCA, Artificial Intelligence</p>
+              <p className="text-sm text-gray-500 font-sans">Jul 2023 - Jun 2025</p>
+              <p className="text-sm text-gray-500 font-sans">Grade: 8.621 CGPA</p>
+              <p className="text-sm text-gray-500 font-sans">Activities and societies: IOT Club</p>
+              <DescriptionWithClamp text="Artificial Intelligence (AI), Machine Learning and +3 skills" className="mt-2" />
             </div>
           </div>
 
           <hr className="mb-6 border-gray-200" />
 
           {/* Education 2: MLSU */}
-          <div className="flex flex-row items-start gap-4">
+          <div className="flex flex-row items-start gap-4 mb-6">
             <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 bg-white rounded border">
-              <img src="/images/mlsu.png" alt="MLSU" className="w-16 h-16 rounded object-contain" />
+              <img src="/images/mlsu.png" alt="Mohanlal Sukhadia University" className="w-16 h-16 rounded object-contain" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-900 font-sans">Mohanlal Sukhadia University</h3>
               <p className="text-gray-600 font-sans">Bachelor's degree, Computer Applications</p>
               <p className="text-sm text-gray-500 font-sans">Apr 2020 - Jun 2023</p>
               <p className="text-sm text-gray-500 font-sans">Grade: 8.31 CGPA</p>
-              <div className="flex items-center gap-2 mt-2 mb-2">
-                <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 18v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1" /><circle cx="12" cy="7" r="4" /></svg>
-                <span className="text-sm text-gray-700 font-sans">Web Development</span>
-              </div>
+              <DescriptionWithClamp text="Web Development" className="mt-2" />
               <div className="flex flex-row items-start gap-4 mt-2">
                 <div className="rounded-lg overflow-hidden border w-40">
                   <img src="/images/award-bca.jpg" alt="Award For 1st In BCA" className="w-full h-24 object-cover" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-base mb-0.5 font-sans">Award For 1st In BCA</h4>
-                  <DescriptionWithClamp text="I was Awarded for achieving 1st rank in J.R. Sharma P.G. College by Pacific University." />
+                  <DescriptionWithClamp text="I was Awarded for For achieving 1st rank in J.R. Sharma P.G. College by Pacific University." />
                 </div>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* ========================= */}
-        {/* Volunteering Section */}
-        {/* ========================= */}
-        <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-gray-900">Volunteering</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Volunteering" />
-          </div>
-
-          {/* Volunteering Item 1 */}
-          <div className="flex items-start gap-4 mb-6">
-            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
-              <img src="/images/gdg.png" alt="GDG Udaipur" className="w-8 h-8 object-contain" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Member</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Google Developers Group Udaipur</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Aug 2024 - Present · 11 mos</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Science and Technology</div>
-            </div>
-          </div>
-          <hr className="my-2 border-gray-200" />
-          {/* Volunteering Item 2 */}
-          <div className="flex items-start gap-4 mb-2">
-            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
-              <img src="/images/sih.png" alt="Smart India Hackathon" className="w-8 h-8 object-contain" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Project Team Lead</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Smart India Hackathon</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Sep 2023 - Dec 2023 · 4 mos</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Science and Technology</div>
-              <DescriptionWithClamp text="Participated in the smart India hackathon 2023 and successfully completed the internal hackathon." className="mt-2" />
-            </div>
-          </div>
-        </section>
-
-        {/* ========================= */}
-        {/* Projects Section */}
-        {/* ========================= */}
-        <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-gray-900">Projects</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Projects" />
-          </div>
-
-          {/* Project 1 */}
-          <div className="mb-10 group transition-all">
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
-                <h3 className="text-lg font-semibold text-gray-900 font-sans">
-                  SPSU SPORTS ERP <span className="font-normal text-gray-500">(Live Project)</span>
-                </h3>
-                <span className="text-sm sm:text-base text-gray-500 font-sans">Aug 2024 – Present</span>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-500 font-medium mb-1 font-sans">Associated with SPSU Udaipur</p>
-              <div className="text-gray-700 text-sm sm:text-base font-medium mb-1 font-sans">Used by over 250+ users</div>
-              <DescriptionWithClamp text="We developed a comprehensive Sports ERP system designed to automate requests, efficiently track inventory, and streamline sports event management for SPSU. The platform supports real-time updates, analytics, and is actively used by students and staff." className="mb-3" />
-              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
-                <img src="/images/spsu-erp-thumbnail.png" alt="SPSU SPORTS ERP" className="w-full h-full object-contain" />
-              </div>
-            </div>
-          </div>
-          <hr className="my-4 border-gray-200" />
-          {/* Project 2 */}
-          <div className="mb-10 group transition-all">
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
-                <h3 className="text-lg font-semibold text-gray-900 font-sans">
-                  School Dropout Prediction Model
-                </h3>
-                <span className="text-sm sm:text-base text-gray-500 font-sans">2023</span>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Independent Research • Udaipur</p>
-              <DescriptionWithClamp text="Developed an ML model to predict student dropouts based on academic and socio-economic data. Published research and created a dashboard for educators to monitor risk." className="mb-3" />
-              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
-                <img src="/images/project2.jpg" alt="Dropout Dashboard" className="w-full h-full object-contain" />
-              </div>
-            </div>
-          </div>
-          <hr className="my-4 border-gray-200" />
-
-          {/* Project 3 */}
-          <div className="group transition-all">
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
-                <h3 className="text-lg font-semibold text-gray-900 font-sans">
-                  AI-Powered Chatbot for Student Queries
-                </h3>
-                <span className="text-sm sm:text-base text-gray-500 font-sans">2024</span>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Internship Project • Remote</p>
-              <DescriptionWithClamp text="Created an NLP chatbot that answers student queries about courses, admissions, and events, integrated with the institution’s website for 24/7 support." className="mb-3" />
-              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
-                <img src="/images/project3.jpg" alt="Chatbot" className="w-full h-full object-contain" />
-              </div>
-            </div>
-          </div>
+          {/* Education 3: Add if required */}
         </section>
 
         {/* ========================= */}
@@ -396,35 +338,83 @@ const App = () => {
         </section>
 
         {/* ========================= */}
-        {/* Publications Section */}
+        {/* Projects Section */}
         {/* ========================= */}
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-gray-900">Publications</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Publications" />
+            <h2 className="text-2xl font-semibold text-gray-900">Projects</h2>
+            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Projects" />
           </div>
 
-          {/* Publication 1 */}
-          <div className="mb-8">
-            <h3 className="font-semibold text-gray-900 text-base mb-0.5">Decoding School Dropout Rate Factors Using Machine Learning Model</h3>
-            <div className="text-gray-700 text-sm mb-1">The Essence ( ISSN 2249-0132 ) · Mar 6, 2024</div>
-            <DescriptionWithClamp text="This publication explores the use of machine learning to decode factors influencing school dropout rates." />
-            <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 text-sm border border-gray-300 rounded-full bg-gray-50 hover:bg-gray-100 text-blue-600 font-medium mt-3 mb-2 gap-2">
-              Show publication
-              <FaExternalLinkAlt className="w-4 h-4 ml-1" />
-            </a>
+          {/* Project 1 */}
+          <div className="mb-10 group transition-all">
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
+                <h3 className="text-lg font-semibold text-gray-900 font-sans">
+                  SPSU SPORTS ERP <span className="font-normal text-gray-500">(Live Project)</span>
+                </h3>
+                <span className="text-sm sm:text-base text-gray-500 font-sans">Aug 2024 – Present</span>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-500 font-medium mb-1 font-sans">Associated with SPSU Udaipur</p>
+              <div className="text-gray-700 text-sm sm:text-base font-medium mb-1 font-sans">Used by over 250+ users</div>
+              <DescriptionWithClamp text="We developed a comprehensive Sports ERP system designed to automate requests, efficiently track inventory, and manage overdue items. This innovative solution offers cost-effective services that streamline operations, saving valuable time and improving decision-making processes." className="mb-3" />
+              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
+                <img src="/images/spsu-erp-thumbnail.png" alt="SPSU SPORTS ERP" className="w-full h-full object-contain" />
+              </div>
+            </div>
           </div>
           <hr className="my-4 border-gray-200" />
 
-          {/* Publication 2 */}
-          <div>
-            <h3 className="font-semibold text-gray-900 text-base mb-0.5">Deficiency of AI in Mathematics</h3>
-            <div className="text-gray-700 text-sm mb-1">The Essence ( ISSN 2249-0132 ) · Mar 6, 2024</div>
-            <DescriptionWithClamp text="This publication discusses the limitations and challenges of AI in the field of mathematics." />
-            <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 text-sm border border-gray-300 rounded-full bg-gray-50 hover:bg-gray-100 text-blue-600 font-medium mt-3 mb-2 gap-2">
-              Show publication
-              <FaExternalLinkAlt className="w-4 h-4 ml-1" />
-            </a>
+          {/* Project 2 */}
+          <div className="mb-10 group transition-all">
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
+                <h3 className="text-lg font-semibold text-gray-900 font-sans">HandFlow</h3>
+                <span className="text-sm sm:text-base text-gray-500 font-sans">Mar 2024 – Present</span>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Associated with SPSU Udaipur</p>
+              <DescriptionWithClamp text="Implemented a real-time hand gesture recognition system for home automation, utilizing an ESP32 microcontroller and a custom model 'HandFlow' based on Google MediaPipe. User control electronic devices through gestures via a web interface, with signals transmitted to Firebase and actions executed by the ESP32." className="mb-3" />
+              <div className="flex-shrink-0 flex items-center justify-center w-40 h-24 bg-white rounded-lg border">
+                <img src="/images/project2.jpg" alt="HandFlow" className="w-full h-full object-contain" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================= */}
+        {/* Volunteering Section */}
+        {/* ========================= */}
+        <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-semibold text-gray-900">Volunteering</h2>
+            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Volunteering" />
+          </div>
+
+          {/* Volunteering Item 1 */}
+          <div className="flex items-start gap-4 mb-6">
+            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
+              <img src="/images/gdg.png" alt="GDG Udaipur" className="w-8 h-8 object-contain" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Member</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Google Developers Group Udaipur</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Aug 2024 - Present · 11 mos</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Science and Technology</div>
+            </div>
+          </div>
+          <hr className="my-2 border-gray-200" />
+          {/* Volunteering Item 2 */}
+          <div className="flex items-start gap-4 mb-2">
+            <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-white rounded border">
+              <img src="/images/sih.png" alt="Smart India Hackathon" className="w-8 h-8 object-contain" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 font-sans">Project Team Lead</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-sans">Smart India Hackathon</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-0.5 font-sans">Sep 2023 - Dec 2023 · 4 mos</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-1 font-sans">Science and Technology</div>
+              <DescriptionWithClamp text="Participated in the smart India hackathon 2023 and successfully completed the internal hackathon." className="mt-2" />
+            </div>
           </div>
         </section>
       </div>
