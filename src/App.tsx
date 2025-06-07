@@ -202,9 +202,9 @@ const App = () => {
           </div>
 
           {/* Education 1: SPSU */}
-          <div className="flex space-x-4 mb-6">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-purple-600 rounded flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row sm:space-x-4 mb-6">
+            <div className="flex-shrink-0 flex justify-center sm:block mb-2 sm:mb-0">
+              <div className="w-16 h-16 sm:w-12 sm:h-12 bg-purple-600 rounded flex items-center justify-center">
                 <span className="text-white font-semibold text-sm">SPSU</span>
               </div>
             </div>
@@ -219,9 +219,9 @@ const App = () => {
           <hr className="mb-6 border-gray-200" />
 
           {/* Education 2: MLSU */}
-          <div className="flex space-x-4">
-            <div className="flex-shrink-0">
-              <img src="/images/mlsu.png" alt="MLSU" className="w-12 h-12 rounded object-contain bg-white border" />
+          <div className="flex flex-col sm:flex-row sm:space-x-4">
+            <div className="flex-shrink-0 flex justify-center sm:block mb-2 sm:mb-0">
+              <img src="/images/mlsu.png" alt="MLSU" className="w-16 h-16 sm:w-12 sm:h-12 rounded object-contain bg-white border" />
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-900 font-sans">Mohanlal Sukhadia University</h3>
@@ -232,9 +232,9 @@ const App = () => {
                 <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 18v-1a4 4 0 00-4-4H8a4 4 0 00-4 4v1" /><circle cx="12" cy="7" r="4" /></svg>
                 <span className="text-sm text-gray-700 font-sans">Web Development</span>
               </div>
-              <div className="flex items-start gap-4 mt-2">
-                <div className="rounded-lg overflow-hidden border w-40">
-                  <img src="/images/award-bca.jpg" alt="Award For 1st In BCA" className="w-40 h-24 object-cover" />
+              <div className="flex flex-col sm:flex-row items-start gap-4 mt-2">
+                <div className="rounded-lg overflow-hidden border w-full sm:w-40">
+                  <img src="/images/award-bca.jpg" alt="Award For 1st In BCA" className="w-full sm:w-40 h-24 object-cover" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 text-base mb-0.5 font-sans">Award For 1st In BCA</h4>
@@ -368,10 +368,10 @@ const App = () => {
               <img src="/images/hackerrank.png" alt="HackerRank" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5">JavaScript (Intermediate)</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5">HackerRank</div>
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 leading-tight">JavaScript (Intermediate)</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-medium">HackerRank</div>
               <div className="text-xs sm:text-sm text-gray-500 mb-0.5">Issued Nov 2024</div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-2">Credential ID e9a9bc8ae963</div>
+              <div className="text-xs sm:text-sm text-gray-500 mb-2">Credential ID <span className="break-all font-mono">e9a9bc8ae963</span></div>
               <DescriptionWithClamp text="Credential for JavaScript (Intermediate) assessment by HackerRank." />
               <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 text-sm sm:text-base border border-gray-300 rounded-full bg-gray-50 hover:bg-gray-100 text-blue-600 font-medium mt-3 mb-2 gap-2">
                 Show credential
@@ -380,7 +380,7 @@ const App = () => {
             </div>
           </div>
 
-          <hr className="my-4 border-gray-200" />
+          <hr className="sm:my-4 my-3 border-gray-200" />
 
           {/* Certificate 2 */}
           <div className="flex flex-row gap-4 mb-2 items-start">
@@ -388,8 +388,8 @@ const App = () => {
               <img src="/images/testdome.png" alt="TestDome" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5">Software Engineering Assessment Test</h3>
-              <div className="text-gray-700 text-sm sm:text-base mb-0.5">TestDome</div>
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-0.5 leading-tight">Software Engineering Assessment Test</h3>
+              <div className="text-gray-700 text-sm sm:text-base mb-0.5 font-medium">TestDome</div>
               <div className="text-xs sm:text-sm text-gray-500 mb-0.5">Issued Oct 2024</div>
               <div className="text-xs sm:text-sm text-gray-500 mb-2 break-all">Credential ID <a href="https://www.testdome.com/certificates/c5b8b4a919b140f5879391f86811c85e" target="_blank" rel="noopener noreferrer" className="underline text-blue-600">www.testdome.com/certificates/c5b8b4a919b140f5879391f86811c85e</a></div>
               <DescriptionWithClamp text="Credential for Software Engineering Assessment Test by TestDome." />
