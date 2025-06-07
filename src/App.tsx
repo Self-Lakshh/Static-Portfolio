@@ -4,9 +4,20 @@ import { FiEdit2 } from 'react-icons/fi';
 import './index.css';
 
 const App = () => {
-  const [aboutExpanded, setAboutExpanded] = useState(false);
 
+  const [aboutExpanded, setAboutExpanded] = useState(false);
   const aboutFull = `AI/ML enthusiast mastering Python, TensorFlow, and Scikit-learn while pursuing MCA from SPSU, Udaipur. Proficient in web development with HTML5, CSS, Bootstrap, and JavaScript. Published author on “AI applications” in mathematics and “Machine learning for school dropout prediction”. Eager to apply skills in AI/ML to real-world projects.`;
+
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  const toggleExpand = (id) => {
+    setExpandedProject(expandedProject === id ? null : id);
+  };
+
+  const descriptionClass = (id) =>
+    expandedProject === id
+      ? "text-gray-700 text-sm mb-4 max-h-full transition-all duration-300 ease-in-out"
+      : "text-gray-700 text-sm mb-4 line-clamp-3 overflow-hidden cursor-pointer";
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -215,6 +226,122 @@ const App = () => {
                 Focused on Artificial Intelligence, Machine Learning, and Full Stack Web Development. Published research on AI applications in mathematics and dropout prediction.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="bg-white rounded-lg shadow border border-gray-200 p-4 sm:p-6">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-semibold text-gray-900">Projects</h2>
+            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" />
+          </div>
+
+          {/* Project 1 */}
+          <div className="mb-8">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+              <h3 className="text-lg font-semibold text-gray-900">
+                SPSU SPORTS ERP (Live Project)
+              </h3>
+              <span className="text-sm text-gray-500 mt-1 sm:mt-0">
+                Aug 2024 - Present
+              </span>
+            </div>
+            <p className="text-gray-600 mb-2 italic">Associated with SPSU Udaipur</p>
+            <p
+              className={descriptionClass(1)}
+              onClick={() => toggleExpand(1)}
+              aria-expanded={expandedProject === 1}
+            >
+              Used by Over 250+ users. We developed a comprehensive Sports ERP system
+              designed to automate requests, efficiently track inventory, and
+              streamline sports event management...
+              {expandedProject !== 1 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see more
+                </span>
+              )}
+              {expandedProject === 1 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see less
+                </span>
+              )}
+            </p>
+            <img
+              src="/images/spsu-erp-thumbnail.png"
+              alt="SPSU SPORTS ERP thumbnail"
+              className="w-full sm:w-48 h-28 object-cover rounded-md shadow"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Project 2 */}
+          <div className="mb-8">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+              <h3 className="text-lg font-semibold text-gray-900">
+                AI for Dropout Prediction
+              </h3>
+              <span className="text-sm text-gray-500 mt-1 sm:mt-0">2023</span>
+            </div>
+            <p className="text-gray-600 mb-2 italic">Research Project</p>
+            <p
+              className={descriptionClass(2)}
+              onClick={() => toggleExpand(2)}
+              aria-expanded={expandedProject === 2}
+            >
+              Developed and published a machine learning model to predict student
+              dropout risk using academic and demographic data...
+              {expandedProject !== 2 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see more
+                </span>
+              )}
+              {expandedProject === 2 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see less
+                </span>
+              )}
+            </p>
+            <img
+              src="/images/ai-dropout.png"
+              alt="AI Dropout Prediction thumbnail"
+              className="w-full sm:w-48 h-28 object-cover rounded-md shadow"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Project 3 */}
+          <div className="mb-8">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-1">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Nexio Dev Group Website
+              </h3>
+              <span className="text-sm text-gray-500 mt-1 sm:mt-0">2024</span>
+            </div>
+            <p className="text-gray-600 mb-2 italic">Open Source</p>
+            <p
+              className={descriptionClass(3)}
+              onClick={() => toggleExpand(3)}
+              aria-expanded={expandedProject === 3}
+            >
+              Built and maintain the official website for Nexio Dev Group,
+              featuring member profiles, project showcases, and a blog...
+              {expandedProject !== 3 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see more
+                </span>
+              )}
+              {expandedProject === 3 && (
+                <span className="text-indigo-600 ml-1 underline cursor-pointer">
+                  see less
+                </span>
+              )}
+            </p>
+            <img
+              src="/images/nexio-website.png"
+              alt="Nexio Dev Group Website thumbnail"
+              className="w-full sm:w-48 h-28 object-cover rounded-md shadow"
+              loading="lazy"
+            />
           </div>
         </section>
       </div>
