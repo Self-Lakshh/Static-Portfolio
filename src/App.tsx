@@ -66,7 +66,7 @@ const App = () => {
           data-aos="fade-up"
         >
           {/* Banner */}
-          <div className="relative w-full aspect-[4/1] bg-gray-100">
+          <div className="relative w-full aspect-[4/1] bg-gray-100 min-h-[160px] sm:min-h-0">
             <img
               src="/banner.jpeg"
               alt="Profile Banner"
@@ -202,11 +202,9 @@ const App = () => {
           </div>
 
           {/* Education 1: SPSU */}
-          <div className="flex flex-col sm:flex-row sm:space-x-4 mb-6">
-            <div className="flex-shrink-0 flex justify-center sm:block mb-2 sm:mb-0">
-              <div className="w-16 h-16 sm:w-12 sm:h-12 bg-purple-600 rounded flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">SPSU</span>
-              </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-12 sm:h-12 bg-purple-600 rounded mx-auto sm:mx-0">
+              <span className="text-white font-semibold text-sm">SPSU</span>
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-gray-900 font-sans">Sir Padampat Singhania University</h3>
@@ -219,8 +217,8 @@ const App = () => {
           <hr className="mb-6 border-gray-200" />
 
           {/* Education 2: MLSU */}
-          <div className="flex flex-col sm:flex-row sm:space-x-4">
-            <div className="flex-shrink-0 flex justify-center sm:block mb-2 sm:mb-0">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-12 sm:h-12 mx-auto sm:mx-0">
               <img src="/images/mlsu.png" alt="MLSU" className="w-16 h-16 sm:w-12 sm:h-12 rounded object-contain bg-white border" />
             </div>
             <div className="flex-1">

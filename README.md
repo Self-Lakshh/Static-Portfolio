@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# LinkedIn Mimic Portfolio
 
-## Project info
+A modern, responsive personal portfolio web app inspired by LinkedIn's profile design. Built with React, TypeScript, and Tailwind CSS, this project showcases your professional experience, education, projects, certifications, and more in a clean, elegant layout.
 
-**URL**: https://lovable.dev/projects/066cac0c-0409-41e2-93ae-f885386e3251
+## 🚀 Live Demo
 
-## How can I edit this code?
+[View the Live Portfolio](https://static-portfolio-blue.vercel.app/)
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- LinkedIn-inspired profile card and banner
+- Responsive design for all devices
+- Animated sections with AOS (Animate On Scroll)
+- Expandable/collapsible descriptions
+- Experience, Education, Projects, Certifications, and Publications sections
+- Social media links and verified badge
+- Clean, accessible, and modern UI
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/066cac0c-0409-41e2-93ae-f885386e3251) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React** (with Hooks)
+- **TypeScript**
+- **Tailwind CSS**
+- **AOS** (Animate On Scroll)
+- **React Icons**
+- **Vite** (for fast development)
 
-**Use your preferred IDE**
+## 📦 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/static-portfolio.git
+   cd static-portfolio
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+4. **Open in your browser:**
+   Visit `http://localhost:5173` (or the port shown in your terminal).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🖼️ Customization
 
-Follow these steps:
+- Update your profile, experience, education, and other details in `src/App.tsx`.
+- Replace images in the `public/` folder (e.g., `banner.jpeg`, `pfp.jpg`).
+- Adjust styles in `index.css` or extend Tailwind config as needed.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📄 License
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+This project is open source and available under the [MIT License](LICENSE).
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/066cac0c-0409-41e2-93ae-f885386e3251) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> Designed and developed for a professional online presence. Inspired by LinkedIn, built for you.
