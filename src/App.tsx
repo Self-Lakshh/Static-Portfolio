@@ -4,8 +4,9 @@ import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Auth from './components/Auth/Auth';
 import Mainpage from './views/Mainpage';
-import { ProtectedRoute, PublicRoute } from './routes/index';
-import Layout from './layouts/index';
+import { ProtectedRoute, PublicRoute } from './routes/ProtectedRoute';
+import AuthLayout from './layouts/AuthLayout';
+import MainLayout from './layouts/MainLayout';
 import './index.css';
 
 // =========================
@@ -62,22 +63,20 @@ const App = () => {
   // Secure route guard for Mainpage
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route element={<PublicRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/login" element={<Auth mode="login" onAuth={() => setIsAuthenticated(true)} />} />
-            <Route path="/signup" element={<Auth mode="signup" onAuth={() => setIsAuthenticated(true)} />} />
-          </Route>
-          <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-            <Route path="/" element={<Mainpage />} />
-          </Route>
-          <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/login"} replace />} />
-        </Routes>
-        {/* TEMP: Remove this after real auth is in place */}
-        {!isAuthenticated && (
-          <button onClick={tempSignup} className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded shadow-lg z-50">Temp Signup</button>
-        )}
-      </Layout>
+      <Routes>
+        <Route element={<PublicRoute isAuthenticated={isAuthenticated} />}>
+          <Route path="/login" element={<Auth mode="login" onAuth={() => setIsAuthenticated(true)} />} />
+          <Route path="/signup" element={<Auth mode="signup" onAuth={() => setIsAuthenticated(true)} />} />
+        </Route>
+        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+          <Route path="/" element={<Mainpage />} />
+        </Route>
+        <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/login"} replace />} />
+      </Routes>
+      {/* TEMP: Remove this after real auth is in place */}
+      {!isAuthenticated && (
+        <button onClick={tempSignup} className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded shadow-lg z-50">Temp Signup</button>
+      )}
     </Router>
   );
 };
