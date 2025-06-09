@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaCheckCircle, FaGithub, FaLinkedin, FaTwitter, FaExternalLinkAlt } from 'react-icons/fa';
-import { FiEdit2 } from 'react-icons/fi';
+import { FiEdit2, FiPlus } from 'react-icons/fi';
+import AddEducation from '../src/components/AddEducation';
+import AddExperience from './components/AddExperience';
+import AddLicense from './components/AddLicense';
+import AddProject from './components/AddProject';
+import AddVolunteering from './components/AddVolunteering';
 import './index.css';
 
 // =========================
@@ -49,6 +54,13 @@ const App = () => {
   // About section expand/collapse
   const [aboutExpanded, setAboutExpanded] = useState(false);
   const aboutFull = `AI/ML enthusiast mastering Python, TensorFlow, and Scikit-learn while pursuing MCA from SPSU, Udaipur. Proficient in web development with HTML5, CSS, Bootstrap, and JavaScript. Published author on “AI applications” in mathematics and “Machine learning for school dropout prediction”. Eager to apply skills in AI/ML to real-world projects.`;
+
+  // Modal state for AddEducation
+  const [showAddEducation, setShowAddEducation] = useState(false);
+  const [showAddExperience, setShowAddExperience] = useState(false);
+  const [showAddLicense, setShowAddLicense] = useState(false);
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [showAddVolunteering, setShowAddVolunteering] = useState(false);
 
   // Initialize AOS (Animate On Scroll)
   useEffect(() => {
@@ -158,7 +170,17 @@ const App = () => {
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Experience</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Experience" />
+            <div className="flex items-center gap-3">
+              <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Experience" />
+              <button
+                className="rounded-full p-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-500 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-gray-300"
+                aria-label="Add Experience"
+                onClick={() => setShowAddExperience(true)}
+                type="button"
+              >
+                <FiPlus className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Experience Item 1 */}
@@ -237,13 +259,26 @@ const App = () => {
           </div>
         </section>
 
+        {/* AddExperience Modal */}
+        <AddExperience isOpen={showAddExperience} onClose={() => setShowAddExperience(false)} />
+
         {/* ========================= */}
         {/* Education Section */}
         {/* ========================= */}
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Education</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Education" />
+            <div className="flex items-center gap-3">
+              <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Education" />
+              <button
+                className="rounded-full p-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-500 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-gray-300"
+                aria-label="Add Education"
+                onClick={() => setShowAddEducation(true)}
+                type="button"
+              >
+                <FiPlus className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Education 1: SPSU */}
@@ -295,7 +330,17 @@ const App = () => {
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Licenses & Certifications</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Licenses & Certifications" />
+            <div className="flex items-center gap-3">
+              <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Licenses & Certifications" />
+              <button
+                className="rounded-full p-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-500 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-gray-300"
+                aria-label="Add License or Certification"
+                onClick={() => setShowAddLicense(true)}
+                type="button"
+              >
+                <FiPlus className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Certificate 1 */}
@@ -337,13 +382,26 @@ const App = () => {
           </div>
         </section>
 
+        {/* AddLicense Modal */}
+        <AddLicense isOpen={showAddLicense} onClose={() => setShowAddLicense(false)} />
+
         {/* ========================= */}
         {/* Projects Section */}
         {/* ========================= */}
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Projects</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Projects" />
+            <div className="flex items-center gap-3">
+              <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Projects" />
+              <button
+                className="rounded-full p-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-500 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-gray-300"
+                aria-label="Add Project"
+                onClick={() => setShowAddProject(true)}
+                type="button"
+              >
+                <FiPlus className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Project 1 */}
@@ -381,13 +439,26 @@ const App = () => {
           </div>
         </section>
 
+        {/* AddProject Modal */}
+        <AddProject isOpen={showAddProject} onClose={() => setShowAddProject(false)} />
+
         {/* ========================= */}
         {/* Volunteering Section */}
         {/* ========================= */}
         <section className="bg-white rounded-xl shadow-md border border-gray-200 p-4 sm:p-6" data-aos="fade-up">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-semibold text-gray-900">Volunteering</h2>
-            <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Volunteering" />
+            <div className="flex items-center gap-3">
+              <FiEdit2 className="w-5 h-5 text-gray-400 hover:text-gray-600 cursor-pointer" aria-label="Edit Volunteering" />
+              <button
+                className="rounded-full p-1.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 text-gray-500 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-gray-300"
+                aria-label="Add Volunteering"
+                onClick={() => setShowAddVolunteering(true)}
+                type="button"
+              >
+                <FiPlus className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Volunteering Item 1 */}
@@ -417,6 +488,10 @@ const App = () => {
             </div>
           </div>
         </section>
+
+        {/* AddVolunteering Modal */}
+        <AddVolunteering isOpen={showAddVolunteering} onClose={() => setShowAddVolunteering(false)} />
+      
       </div>
     </div>
   );
